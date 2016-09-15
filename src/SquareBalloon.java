@@ -8,17 +8,23 @@ public class SquareBalloon extends Balloon{
 	public SquareBalloon(int x, int y, int r, Color c){
 		super(x, y, r, c);
 	}
-	public void draw(Graphics g, boolean makeItFilled)
+	  public double distance(int x, int y)
 	  {
+	    double dx = x - getX();
+	    double dy = y - getY();
+	    return Math.sqrt(dx*dx + dy*dy);
+	  }
+	public void draw(Graphics g, boolean makeItFilled)
+	  {	
 		int xCenter = getX();
 		int yCenter = getY();
 		int radius = getRadius();
 	    g.setColor(getColor());
 	    if (makeItFilled)
-	      g.fillOval(xCenter - radius,
-	                 yCenter - radius, 2*radius, 2*radius);
+	      g.fillRect(xCenter - radius,
+	                 yCenter - radius, radius, radius);
 	    else
-	      g.drawOval(xCenter - radius,
-	                 yCenter - radius, 2*radius, 2*radius);
+	      g.drawRect(xCenter - radius,
+	                 yCenter - radius, radius, radius);
 	  }
 	}

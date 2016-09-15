@@ -17,9 +17,9 @@ public class OvalBalloon extends Balloon{
 	    g.setColor(getColor());
 	    if (makeItFilled)
 	      g.fillOval(xCenter - radius,
-	                 yCenter - radius, 2*radius, 2*radius);
+	                 yCenter - radius, radius, 2*radius);
 	    else
 	      g.drawOval(xCenter - radius,
-	                 yCenter - radius, 2*radius, 2*radius);
+	                 yCenter - radius, radius, 2*radius);
 	  }
 }

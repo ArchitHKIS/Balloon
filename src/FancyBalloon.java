@@ -21,5 +21,6 @@ public class FancyBalloon extends Balloon{
 	    else
 	      g.drawOval(xCenter - radius,
 	                 yCenter - radius, 2*radius, 2*radius);
+	    
 	  }
 }
